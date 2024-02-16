@@ -2,11 +2,13 @@ import styles from './List.module.scss';
 import Column from '../Column/Column';
 import ColumnForm from '../ColumnForm/ColumnForm';
 import { useSelector } from 'react-redux';
-import { getAllColumns, getListById, getColumnsByList } from '../../redux/store';
+import { getListById, getColumnsByList } from '../../redux/store';
+import { useParams } from 'react-router-dom';
 
 const List = () => {
-    const columns = useSelector(lists => getColumnsByList(lists, 1));
-    const listData = useSelector(lists => getListById(lists, 1));
+    const { listId } = useParams();
+    const columns = useSelector(lists => getColumnsByList(lists, listId));
+    const listData = useSelector(lists => getListById(lists, listId));
     return (
         <div className={styles.list}>
         <header className={styles.header}>
@@ -20,7 +22,7 @@ const List = () => {
                     {...column}  />
             )}
           </section>
-          <ColumnForm/>
+          <ColumnForm listId={listId}/>
         </div>
     );
 };
