@@ -1,15 +1,19 @@
-import Hero from "./components/Hero/Hero";
-import SearchForm from "./components/SearchForm/SearchForm";
-import List from "./components/List/List";
+import Home from "./Home";
+import Favorite from "./components/Favorite/Favorite";
+import About from "./components/About/About";
 import Container from "./components/Container/Container";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
-    <Container>
-      <Hero />
-      <SearchForm />
-      <List />
-    </Container>
+    <main>
+    <NavBar />
+      <Container>
+        <Home />
+        <Favorite />
+        <About />
+      </Container>
+    </main>
     );
 }
 

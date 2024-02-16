@@ -1,0 +1,30 @@
+@import '../../styles/settings.scss';
+
+nav {
+    background-color: darken($color-dark, 3%);
+    position: relative;
+}
+.icon {
+    font-size: 24px;
+}
+a {
+    color: white;
+}
+.navwrapper {
+    justify-content: space-between;
+    align-items: center;
+    background-color: darken($color-dark, 3%);
+    display: flex;
+    padding: 20px 100px;
+}
+li{
+    font-family: $font-text;
+    font-weight: bold;
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+    a{
+        text-decoration: none;
+        
+    }
+}
