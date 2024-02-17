@@ -10,4 +10,16 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+
+    span {
+        cursor: pointer;
+    }
+}
+
+button {
+    background-color: white;
+    border: none;
+}
+.isFavorite {
+    color: gold;
 }
