@@ -7,8 +7,7 @@ const Card = props => {
     const dispatch = useDispatch();
 
     const handleSubmit = () => {
-        dispatch(toggleCardFavorite({ isFavorite: props.isFavorite }));
-        console.log(dispatch(toggleCardFavorite({ isFavorite: props.isFavorite })));
+        dispatch(toggleCardFavorite(props.id));
     }
 
     return (
