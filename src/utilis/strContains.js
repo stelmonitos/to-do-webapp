@@ -1,5 +1,10 @@
+
+
 const strContains = (str, substr) => {
-  return str.toLowerCase().includes(substr.toLowerCase())
+ 
+  let reklamowka = substr.searchString;
+  console.log(str)
+  return str.toLowerCase().includes(reklamowka.toLowerCase())
 };
 //In the context of your code, str is card.title and substr (the substring you're checking for) is searchString.
 
