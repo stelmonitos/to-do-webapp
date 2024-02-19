@@ -2,11 +2,11 @@ import PageTitle from '../PageTitle/PageTitle';
 import Card from '../Card/Card';
 import styles from '../Favorite/Favorite.module.scss';
 import { useSelector } from 'react-redux';
-import { getFilteredCards, getFilteredCardsByFavorite } from '../../redux/store';
+import { getFilteredCardsByFavorite } from '../../redux/cardsReducer';
             
 
 const Favorite = props => {
-    const cards = useSelector(state => getFilteredCardsByFavorite(state, true));
+    const cards = useSelector(state => getFilteredCardsByFavorite(state));
     return (
         <>
         <PageTitle>Favorite</PageTitle>
