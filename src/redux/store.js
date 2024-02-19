@@ -7,7 +7,7 @@ import cardsReducer from './cardsReducer';
 import searchStringReducer from './searchStringReducer';
 
 export const getFilteredCards = ({ cards, searchString }, columnId) => cards
-  .filter(card => card.columnId === columnId && strContains(card.title, searchString,));
+  .filter(card => card.columnId === columnId && strContains(card.title, searchString));
 
 export const getFilteredCardsByFavorite = ({ cards }, isFavorite) => cards.filter(card => card.isFavorite === isFavorite);
 
@@ -28,6 +28,8 @@ export const addList = payload => ({ type: 'ADD_LIST', payload });
 export const updateSearchString = payload => ({ type: 'UPDATE_SEARCHSTRING', payload });
 
 export const toggleCardFavorite = payload => ({ type: 'TOGGLE_CARD_FAVORITE', payload });
+
+export const deleteCard = payload => ({ type: 'DELETE_CARD', payload });
 
 const subreducers = {
   lists: listsReducer,

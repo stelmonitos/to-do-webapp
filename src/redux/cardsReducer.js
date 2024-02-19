@@ -6,7 +6,9 @@ const cardsReducer = (statePart = [], action) => {
         return [...statePart, { ...action.payload, id: shortid() }];
       case 'TOGGLE_CARD_FAVORITE':
         return statePart.map(card => (card.id === action.payload) ? { ...card, isFavorite: !card.isFavorite } : card);
-      default:
+      case 'DELETE_CARD':
+        return statePart.filter(card => card.id !== action.payload)
+        default:
         return statePart;
     }
 }
