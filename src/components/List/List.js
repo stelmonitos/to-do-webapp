@@ -13,6 +13,7 @@ const List = () => {
     const { listId } = useParams();
     const columns = useSelector(lists => getColumnsByList(lists, listId));
     const listData = useSelector(lists => getListById(lists, listId));
+    console.log(listData);
     if(!listData) return <Navigate to="/" />
         return (
             <div className={styles.list}>
